@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <p>提问</p> 
+    <form action="/yctime_wechat_api/ask_question" method="post" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="请输入问题的标题" />
+        <input type="text" name="description" placeholder="请输入问题的描述" />
+        <input type="text" name="author" placeholder="请输入作者昵称" />
+        <input type="text" name="tag" placeholder="请输入问题的标签" />
+        <input type="text" name="user_id" placeholder="请输入作者的id" />
+        <input type="file" name="image" />
+        <input type="submit" value="提问" />
+    </form>
+    <p>留言</p> 
+    <form action="/yctime_wechat_api/leave_message" method="post">
+        <input type="text" name="title" placeholder="请输入留言的标题" />
+        <input type="text" name="description" placeholder="请输入留言的描述" />
+        <input type="text" name="author" placeholder="请输入作者昵称" />
+        <input type="submit" value="留言" />
+    </form>
+    <p>回复</p> 
+    <form action="/yctime_wechat_api/reply_question" method="post">
+        <input type="text" name="question_id" placeholder="请输入回复问题的id" />
+        <input type="text" name="author" placeholder="请输入回复作者的昵称" />
+        <input type="text" name="author_id" placeholder="请输入回复作者的id" />
+        <input type="text" name="reply_content" placeholder="请输入回复内容" />
+        <input type="submit" value="回复" />
+    </form>
+  </body>
+</html>

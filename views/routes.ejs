@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+        p{
+            margin-top: 20px;
+        }
+        .base{
+            border:1px solid #000;
+            padding:20px;
+        }
+        .tip{
+            display : block;
+            margin-top:10px;
+            color : #666;
+        }
+    </style>
+  </head>
+  <body>
+    <p>根路径 ： http:// + server + : + port + /yctime_wechat_api</p>
+    <p class="base">
+        获取幻灯片(需携带参数index) : /slide_show
+        <span class="tip">注：</span>
+        <span class="tip">index 参数为 true 时返回首页幻灯片（没有提问问题）</span>
+        <span class="tip">index 参数为 false 时返回技术交流页面幻灯片（没有动态事件）</span>
+        <span class="tip">type : 0 代表动态事件，1 代表技术文章，2 代表提问问题</span>
+    </p>
+    <p class="base">
+        幻灯片详情 : /slide_detail
+        <span class="tip">注：</span>
+        <span class="tip">须携带type，id参数访问</span>
+    </p>
+    <p class="base">动态速递 : /dynamics</p>
+    <p class="base">技术文章列表 : /articles</p>
+    <p class="base">
+        获取技术文章详情 : /article_detail
+        <span class="tip">注：</span>
+        <span class="tip">须携带文章 id 参数访问</span>
+    </p>
+    <p class="base">提问问题列表 : /questions</p>
+    <p class="base">提问问题(post,enctype="multipart/form-data") : /ask_question</p>
+    <p class="base">
+        回复问题(post) : /reply_question
+        <span class="tip">注：</span>
+        <span class="tip">需同时post question_id参数（即所回复问题id）,author(回复者昵称)，author_id（回复者id），reply_content（回复内容）</span>
+    </p>
+    <p class="base">技术交流搜索 : /search</p>
+    <p class="base">技术交流搜索-更多文章 : /search_more_articles</p>
+    <p class="base">技术交流搜索-更多问题 : /search_more_questions</p>
+    <p class="base">荣誉展示 : /honor_show</p>
+    <p class="base">项目介绍 : /project_intruduction</p>
+    <p class="base">给我们留言(post) : /leave_message</p>
+    <p class="base">我的提问列表 : /my_questions</p>
+    <p class="base">我的消息 : /my_message</p>
+    <p class="base">系统消息 : /system_message</p>
+  </body>
+</html>
